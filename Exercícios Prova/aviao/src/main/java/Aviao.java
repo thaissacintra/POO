@@ -12,7 +12,7 @@ public class Aviao {
         this.capacidadeCombustivel = capacidadeCombustivel;
         this.motores = new ArrayList<>();
         // Validação da quantidade de motores
-        if (qtdMotores < 1 && qtdMotores > 8) {
+        if (qtdMotores < 1 || qtdMotores > 8) {
             qtdMotores = 8;
         }
         // Criar a quantidade de motores solicitadas
@@ -25,7 +25,7 @@ public class Aviao {
         for (Motor m : motores) {
             m.ligarMotor();
         }
-        IO.println("O avi\n");
+        IO.println("Todos os motores foram ligados\n");
     }
 
     // Desliga todos os motores

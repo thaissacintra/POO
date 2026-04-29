@@ -1,22 +1,22 @@
 ```mermaid
 classDiagram 
-class Aviao {
-        -int maxTripulates
-        -int maxPassageiros
-        -double capacidadeCombustivel
-        -ArrayList~Motor~ motores
-        +Aviao(int, int, double, String, int)
-        +ligarAviao()
-        +desligarAviao()
-        +ligarIndividualmente(int posicao)
+    class Aviao {
+        - maxTripulantes: int
+        - maxPassageiros: int
+        - capacidadeCombustivel: double
+        - motores: ArrayList<Motor>
+        + ligarAviao() void
+        + desligarAviao() void
+        +Aviao(int maxTripulantes, int maxPassageiros, double capacidadeCombustivel)
+        +adicionarMotor(Motor m)
     }
-
+    
     class Motor {
-        -String tipoMotor
-        -boolean estadoMotor
-        +Motor(String tipoMotor)
-        +ligarMotor()
-        +desligarMotor()
+        -String tipo
+        -boolean ligado
+        +Motor(String tipo)
+        +ligar()
+        +desligar()
     }
     
     Aviao "1" *-- "1..8" Motor
