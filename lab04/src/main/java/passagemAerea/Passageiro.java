@@ -10,4 +10,16 @@ public class Passageiro {
         this.email = email;
         this.telefone = telefone;
     }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getTelefone() {
+        return telefone;
+    }
 }
